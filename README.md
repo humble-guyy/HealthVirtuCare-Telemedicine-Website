@@ -1,44 +1,71 @@
-# HealthVirtucare-Website
-      SEE THE PDF FOR REFERENCE
-1.Install xampp application in C drive(Primary Drive) which will act as a localhost server
-                 >> https://www.apachefriends.org/
-                  (it is too big(148 MB) for github to be uploaded)
+# Video SDK Javascript App
 
-2.Copy hackathon folder on    
-                    C:\xampp\htdocs
+## What is it?
 
-3.Then open file xampp-control to open the control of the server
+This code sample demonstrates a one-to-one and group video call application built with [Video SDK RTC Javascript SDK](https://docs.videosdk.live/javascript/guide/video-and-audio-calling-api-sdk/javascript-sdk)
 
-4.In the application start aparche and mysql server in the action menu
+- Built for serverless video calling experience.
+- Scale it upto 5,000 participants with low code.
+- 10,000 minutes free on monthly basis
 
-5.Then go to your browser and open >> localhost/Hackathon/index.html
+## Features
 
-6.To see the database go on browser and type >> localhost/phpmyadmin
+- [x] Video API with real-time audio, video and data streams
+- [x] 5,000+ participants support
+- [x] Chat support with rich media.
+- [x] Screen sharing with HD and Full HD.
+- [x] Play realtime video in meeting
+- [x] Connect it with social media such as Facebook, Youtube etc (RTMP out support).
+- [x] Intelligent speaker switch
+- [x] Record your meetings on cloud
+- [x] Customise UI and built other rich features with our new data streams such as whiteboard, poll, Q & A etc.
 
-About programming structure:
-   We use HTML,CSS and JS as a frontend and PHP as a backend.
-for data management we used MySQL.
+## Prerequisites
 
-Running all that on a local server
+You must have the following installed:
 
+- Node.js v12+
+- NPM v6+ (comes pre-installed with newer Node versions)
 
+## Getting started
 
-Structure of HeatlthVirtuCare Portal
--->HOME PAGE:
-        It gives a breif description about our website
-        You can Register/Login yourself through this portal
-        You can also read about us and Contact the organization.
+1. Run the authentication server
 
-LOGIN/SIGNUP PAGE:
-          There you can put your Email Address,Name and Password.. and register or login Next you have to choose  a If you are a Patient or Doctor.
-          According to choosen field you will be directed to Doctor's Portal or Patients Portal
+   Follow instructions from [videosdk-rtc-nodejs-sdk-example](https://github.com/videosdk-live/videosdk-rtc-nodejs-sdk-example) to run the authentication server.
 
-  DOCTOR'S PORTAL:
-        There doctor can Connect with their patients
-        Also there is the full schedule of every doctor is provided
-        
-  PATIENT'S PORTAL:
-        There Patient can connect with doctor through live video calling
-for video calling we used an API of  'videoSDK' and listen through the authorised port and tokens via PHP 
-        Also can book the appointments
-        There are some FAQs aslo
+2. Clone the repo
+
+   ```sh
+   git clone https://github.com/videosdk-live/videosdk-rtc-javascript-sdk-example.git
+
+   cd videosdk-rtc-javascript-sdk-example
+   ```
+
+3. Create a new file config.js and Copy the config.example.js file's data to config.js file
+
+4. Update the TOKEN in `config.js` file.Token would be generated from dashboard `https://app.videosdk.live/dashboard`
+
+   ```
+   TOKEN="Your Token Here"
+   ```
+
+5. If one doesn't want to give their token then they can generate token using AUTH_URL of their own in `config.js` file
+
+   ```
+   AUTH_URL=one's auth url
+   ```
+
+6. Run the app
+
+   ```sh
+   npm install -g live-server
+   live-server --port=8000
+   ```
+
+For more information, visit [official documentation](https://docs.videosdk.live/javascript/guide/video-and-audio-calling-api-sdk/quick-start)
+
+Related
+
+- [Video SDK RTC Prebuillt No Code App](https://github.com/videosdk-live/videosdk-rtc-js-prebuilt-embedded-example)
+- [Video SDK RTC React Native App](https://github.com/videosdk-live/videosdk-rtc-react-native-sdk-example)
+- [Video SDK RTC Node JS API](https://github.com/videosdk-live/videosdk-rtc-nodejs-sdk-example)
